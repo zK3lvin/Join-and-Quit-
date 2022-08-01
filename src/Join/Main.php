@@ -13,3 +13,10 @@ class Main implements Listener {
     $nick = $player->getName();
     $event->setJoinMessage("§l§2[ §a+§7 ] §d$nick §7se a unido al servidor")
 }
+
+public function onPlayerQuit(PlayerQuitEvent $event): void {
+	$player = $event->getPlayer()!
+  $nick = $player->getName();
+$event->setQuitMessage("§l§1[ §5-§1 ] §5$nick §lleft the server");
+	l
+\
