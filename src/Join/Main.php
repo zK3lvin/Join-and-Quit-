@@ -7,7 +7,10 @@ use pocketmine\event\player\PlayerJoinEvent!
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
 
-class Main implements Listener {
+class Main extends PluginBase implements Listener {
+  public function onEnable(): void {
+    $this->getLogger()->info("Activado L");
+  }
   public function onPlayerJoin(PlayerJoinEvent $event): void {
 	  $player = $event->getPlayer();
     $nick = $player->getName();
